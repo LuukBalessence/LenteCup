@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{  title }}{% endblock %}
+{% block content %}
+    <table class="table" ALIGN="center">
+        <tr>
+            <th>
+                <div class="notification is-{{ info }} is-small" ALIGN="center">
+                    <button class="delete"></button>
+                        {{ notification1 }}
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th align="center">
+                        {{ notification2 }}
+            </th>
+        </tr>
+    </table>
+{% endblock %}
