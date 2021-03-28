@@ -28,12 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.178.50', '94.214.196.58', '192.168.178.33']
+DEFAULT_FROM_EMAIL = 'euro2020@balessence.nl'
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "common",
+    "LenteCup",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,6 +131,15 @@ INTERNAL_IPS = ["127.0.0.1"]
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+
+# EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+# EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "mail.mijndomein.nl"
 EMAIL_PORT = 465
+EMAIL_HOST_USER = os.environ.get('email_name')
+EMAIL_HOST_PASSWORD = os.environ.get('email_pwd')
+# EMAIL_HOST_PASSWORD = "Letsgetthingsdone2021!"
+# EMAIL_HOST_USER = "euro2020@balessence.nl"
+EMAIL_USE_SSL = True
+

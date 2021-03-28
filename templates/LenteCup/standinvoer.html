@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}NAAM AANPASSEN{% endblock %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <table class="table" ALIGN="center">
+            <form action="" method="post">{% csrf_token %}
+                <tr>
+                    <th>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-primary" id="id_score" name="score"
+                                       placeholder="Score" type="number"/>
+                                <span class="icon is-left">
+                                <i class="fas fa-poll" style="font-size:20px;color:black"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-primary" id="id_week" name="week"
+                                       placeholder="Week" type="text"/>
+                                <span class="icon is-left">
+                                <i class="fas fa-poll" style="font-size:20px;color:black"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                    <tr>
+                    <th>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-primary" id="id_qualifying" name="qualifying"
+                                       placeholder="Quealifyin" type="checkbox"/>
+                                <span class="icon is-left">
+                                <i class="fas fa-poll" style="font-size:20px;color:black"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-primary" id="id_baan" name="baan"
+                                       placeholder="Voer baan in. Optioneel" type="text"/>
+                                <span class="icon is-left">
+                                <i class="fas fa-poll" style="font-size:20px;color:black"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-primary" id="id_lus" name="lus"
+                                       placeholder="Baan, optioneel" type="text"/>
+                                <span class="icon is-left">
+                                <i class="fas fa-poll" style="font-size:20px;color:black"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align:center">
+                        <input style="width:250px" type="submit" class="button is-primary" value="Verzend"/>
+                    </th>
+                </tr>
+            </form>
+        </table>
+
+    {% endif %}
+{% endblock %}
+{% block helptext %}
+    1. Give yourself a beautiful name<br>
+    i.e. first name, alias or nickname<br>
+
+{% endblock helptext %}

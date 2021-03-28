@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+
+from . import views
 from .views import home, explain, about
 
 urlpatterns = [
@@ -25,7 +27,11 @@ urlpatterns = [
     path("common/", include("common.urls")),
     path('accounts/', include('django.contrib.auth.urls')),
     path("explain", explain, name="explain"),
-    path("about", about, name="about")
+    path("about", about, name="about"),
+    path("changefirstname", views.changefirstname, name="changefirstname"),
+    path("myaccount", views.myaccount, name="myaccount"),
+    path("standinvoer", views.standinvoer, name="standinvoer"),
+    path("jouwuitslagen", views.jouwuitslagen, name="jouwuitslagen")
 ]
 
 if settings.DEBUG:
