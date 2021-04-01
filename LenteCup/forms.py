@@ -17,13 +17,8 @@ class ScoresForm(forms.ModelForm):
         fields = "__all__"
 
 
+
+
 class ChangeFirstNameForm(forms.Form):
     firstname = forms.CharField(max_length=30, help_text="Enter your Name")
 
-
-class StandInvoerForm(forms.Form):
-    score = forms.IntegerField(min_value=0, max_value=40)
-    week = forms.Select()
-    qualifying = forms.BooleanField(required=True)
-    baan = forms.CharField()
-    lus = forms.CharField()

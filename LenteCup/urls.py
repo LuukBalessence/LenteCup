@@ -31,7 +31,8 @@ urlpatterns = [
     path("changefirstname", views.changefirstname, name="changefirstname"),
     path("myaccount", views.myaccount, name="myaccount"),
     path("standinvoer", views.standinvoer, name="standinvoer"),
-    path("jouwuitslagen", views.jouwuitslagen, name="jouwuitslagen")
+    path("jouwuitslagen", views.jouwuitslagen, name="jouwuitslagen"),
+    path("overallstandlc", views.overallstandlc, name="overallstandlc")
 ]
 
 if settings.DEBUG:
